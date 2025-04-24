@@ -1,0 +1,24 @@
+//import 'react-native-gesture-handler';
+import React from 'react';
+import {View, StyleSheet} from 'react-native';
+import {MaterialIcons} from '@expo/vector-icons';
+
+export default function Header({navigation}){
+    const openMenu = () => {
+        navigation.openDrawer()
+    }
+
+    return(
+        <View>
+            <MaterialIcons name='menu' size ={28} onPress={openMenu} style={styles.icon}/>
+        </View>
+    );
+}
+
+const styles = StyleSheet.create({
+    icon:{
+        position: 'absolute',
+        alignSelf: 'center',
+        left: 16
+    }
+});

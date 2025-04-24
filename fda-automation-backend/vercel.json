@@ -1,0 +1,21 @@
+{
+    "version": 2,
+    "functions": {
+      "server.js": {
+        "memory": 1024,
+        "maxDuration": 60
+      }
+    },
+    "routes": [
+      {
+        "src": "/api/start-fda-automation",
+        "methods": ["POST"],
+        "dest": "server.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "server.js"
+      }
+    ]
+  }
+  
